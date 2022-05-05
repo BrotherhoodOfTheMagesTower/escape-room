@@ -6,11 +6,13 @@ using UnityEngine.UI;
 public class panelController : MonoBehaviour
 {
     [SerializeField] GameObject panel;
+    [SerializeField] bool hideAtStart;
     // Start is called before the first frame update
 
     private void Start()
     {
-        this.hidePanel();
+        if(hideAtStart)
+            this.hidePanel();
     }
     public void showPanel()
     {
