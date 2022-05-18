@@ -5,14 +5,13 @@ using UnityStandardAssets.Characters.FirstPerson;
 
 public class LadderScript : MonoBehaviour
 {
-	public Transform chController;
+	public GameObject chController;
 	bool inside = false;
-	public float speedUpDown = 3.2f;
-	public FirstPersonController FPSInput;
-
+	public float speedUpDown = 0.5f;
+		
 	void Start()
 	{
-		FPSInput = GetComponent<FirstPersonController>();
+		chController = GameObject.Find("PlayerCapsule");
 		inside = false;
 	}
 
@@ -20,7 +19,6 @@ public class LadderScript : MonoBehaviour
 	{
 		if (col.gameObject.tag == "Ladder")
 		{
-			FPSInput.enabled = false;
 			inside = !inside;
 		}
 	}
@@ -29,21 +27,20 @@ public class LadderScript : MonoBehaviour
 	{
 		if (col.gameObject.tag == "Ladder")
 		{
-			FPSInput.enabled = true;
 			inside = !inside;
 		}
 	}
 
 	void Update()
 	{
-		if (inside == true && Input.GetKey("w"))
+		if (inside == true && Input.GetKey(KeyCode.W))
 		{
-			chController.transform.position += Vector3.up / speedUpDown;
+			chController.transform.position += (new Vector3(0, speedUpDown, 0));
 		}
 
-		if (inside == true && Input.GetKey("s"))
+		if (inside == true && Input.GetKey(KeyCode.S))
 		{
-			chController.transform.position += Vector3.down / speedUpDown;
+			chController.transform.position += (new Vector3(0, -speedUpDown, 0));
 		}
 	}
 }
