@@ -7,6 +7,7 @@ public class InventoryController : MonoBehaviour
 {
     [SerializeField] GameObject panel;
     [SerializeField] bool showInventory = false;
+    [SerializeField] InventoryManager inventoryManager;
     FirstPersonController FPC;
     StarterAssets.StarterAssetsInputs mouseLook;
     // Start is called before the first frame update
@@ -24,6 +25,7 @@ public class InventoryController : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.I))
         {
+            inventoryManager.ListItems();
             openInventory();
         }
 

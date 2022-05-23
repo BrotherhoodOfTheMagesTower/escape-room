@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 public class InventoryManager : MonoBehaviour
 {
-    [SerializeField] List<Item> Items;
-    [SerializeField] Transform ItemContent;
-    [SerializeField] GameObject InventoryItem;
+    public List<Item> Items;
+    public Transform ItemContent;
+    public GameObject InventoryItem;
     private void Awake()
     {
         Items = new List<Item>();
@@ -26,11 +26,16 @@ public class InventoryManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        this.ListItems();
     }
 
     public void ListItems()
     {
+        foreach(Transform item in ItemContent)
+        {
+            Destroy(item.gameObject);
+        }
+
         foreach(var item in Items)
         {
             GameObject obj = Instantiate(InventoryItem, ItemContent);
@@ -45,9 +50,10 @@ public class InventoryManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Q))
+        if(Input.GetKeyDown(KeyCode.Q)) // DEBUG
         {
             Items.Add(new Item() { id = 2, itemName = "test", value = 13 });
+            this.ListItems();
         }
     }
 }
