@@ -13505,8 +13505,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.42, y: 2.47, z: 4.27}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.42, y: 1.2, z: 4.27}
+  m_Center: {x: 0, y: 0.62, z: 0}
 --- !u!4 &1657932816 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7640213710847154820, guid: 27c49cb0d50bd3e44917c9404248bba6, type: 3}
@@ -14096,9 +14096,57 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 534528260}
     m_Modifications:
+    - target: {fileID: 1120982670652626, guid: 3feea208febe63b4f91085a75560d00a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1216012889522922, guid: 3feea208febe63b4f91085a75560d00a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1223451098470690, guid: 3feea208febe63b4f91085a75560d00a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1251868619462698, guid: 3feea208febe63b4f91085a75560d00a, type: 3}
       propertyPath: m_Name
       value: ConcreteTubes
+      objectReference: {fileID: 0}
+    - target: {fileID: 1251868619462698, guid: 3feea208febe63b4f91085a75560d00a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1313266116805966, guid: 3feea208febe63b4f91085a75560d00a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1387711857915586, guid: 3feea208febe63b4f91085a75560d00a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1489379349155386, guid: 3feea208febe63b4f91085a75560d00a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1600251482625914, guid: 3feea208febe63b4f91085a75560d00a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1607749382060054, guid: 3feea208febe63b4f91085a75560d00a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1650506179118718, guid: 3feea208febe63b4f91085a75560d00a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1711213550867712, guid: 3feea208febe63b4f91085a75560d00a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1870713137412360, guid: 3feea208febe63b4f91085a75560d00a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4212771881742316, guid: 3feea208febe63b4f91085a75560d00a, type: 3}
       propertyPath: m_RootOrder
