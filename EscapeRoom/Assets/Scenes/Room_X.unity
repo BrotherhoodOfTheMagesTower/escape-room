@@ -9866,7 +9866,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: Close
 --- !u!222 &992233150
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -16123,9 +16123,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1499239294}
+      - m_Target: {fileID: 1499239295}
         m_TargetAssemblyTypeName: InventoryController, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: handleCloseButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
