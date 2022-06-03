@@ -16,4 +16,4 @@ MonoBehaviour:
   itemName: Key_RoomX
   content: This item was found in Room_X.
   value: 0
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: f22c507e154c2504a92dbe813189bd15, type: 3}

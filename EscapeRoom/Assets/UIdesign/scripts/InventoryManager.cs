@@ -5,12 +5,12 @@ using UnityEngine.UI;
 
 public class InventoryManager : MonoBehaviour
 {
-    public List<Item> Items;
+    public static List<Item> Items = new List<Item>();
     public Transform ItemContent;
     public GameObject InventoryItem;
     private void Awake()
     {
-        Items = new List<Item>();
+
     }
 
     public void Add(Item item)
