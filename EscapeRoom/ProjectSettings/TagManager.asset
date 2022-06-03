@@ -6,6 +6,22 @@ TagManager:
   tags:
   - CinemachineTarget
   - Ladder
+  - Fire
+  - GasTank
+  - FirstLight
+  - SecondLight
+  - ThirdLight
+  - FourthLight
+  - GarbageCart
+  - PalletJack
+  - WoodenCableDrum
+  - ConcreteTubes
+  - Barrel
+  - FifthLight
+  - Cardboard
+  - JerryCan
+  - ChestLid
+  - Key
   layers:
   - Default
   - TransparentFX
