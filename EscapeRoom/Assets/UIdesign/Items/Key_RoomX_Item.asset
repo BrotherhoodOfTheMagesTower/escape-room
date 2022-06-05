@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b92a645bd308b3c46b95e79f8a2b3e0a, type: 3}
   m_Name: Key_RoomX_Item
   m_EditorClassIdentifier: 
-  id: 1
+  id: 3
   itemName: Key_RoomX
   content: This item was found in Room_X.
   value: 0
