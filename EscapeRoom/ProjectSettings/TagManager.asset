@@ -30,6 +30,8 @@ TagManager:
   - carCamera
   - movingCar
   - movingCarCamera
+  - Selectable
+  - pBoxCollider
   layers:
   - Default
   - TransparentFX
