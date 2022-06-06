@@ -87,7 +87,7 @@ public class InventoryController : MonoBehaviour
         StartCoroutine(CloseInventoryPanel());
         mouseLook.cursorLocked = true;
         mouseLook.cursorInputForLook = true;
-        //FPC.stopStartCameraRotationUpdate = true;
+        FPC.stopStartCameraRotationUpdate = true;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
@@ -129,6 +129,5 @@ public class InventoryController : MonoBehaviour
         showInventory = false;
         panel.SetActive(showInventory);
         inspectionPanel.SetActive(showInventory);
-        FPC.stopStartCameraRotationUpdate = true;
     }
 }

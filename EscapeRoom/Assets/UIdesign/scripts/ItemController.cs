@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ItemController : MonoBehaviour
 {
+    [Header("Item")]
     public Item item;
     private InventoryController currentController;
 
