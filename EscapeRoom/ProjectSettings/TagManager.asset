@@ -31,7 +31,11 @@ TagManager:
   - movingCar
   - movingCarCamera
   - Selectable
+<<<<<<< HEAD
   - pBoxCollider
+=======
+  - Pillow
+>>>>>>> room2
   layers:
   - Default
   - TransparentFX
