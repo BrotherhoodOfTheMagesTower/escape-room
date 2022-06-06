@@ -54,6 +54,10 @@ namespace StarterAssets
 		// cinemachine
 		private float _cinemachineTargetPitch;
 
+		// Custom flag (aby zablokowaæ ruch kamery gdy jesteœmy w ekwipunku)
+		public bool stopStartCameraRotationUpdate { get; set; } = true;
+		private bool cameraInputWasDisable = false;
+
 		// player
 		private float _speed;
 		private float _rotationVelocity;
@@ -102,7 +106,10 @@ namespace StarterAssets
 
 		private void LateUpdate()
 		{
-			CameraRotation();
+			if (stopStartCameraRotationUpdate)
+				CameraRotation();
+			else
+				cameraInputWasDisable = true;
 		}
 
 		private void GroundedCheck()
@@ -119,18 +126,26 @@ namespace StarterAssets
 			{
 				//Don't multiply mouse input by Time.deltaTime
 				float deltaTimeMultiplier = IsCurrentDeviceMouse ? 1.0f : Time.deltaTime;
-				
-				_cinemachineTargetPitch += _input.look.y * RotationSpeed * deltaTimeMultiplier;
-				_rotationVelocity = _input.look.x * RotationSpeed * deltaTimeMultiplier;
+				if (cameraInputWasDisable) // Jeœli ob³uga kamery zosta³a wy³¹czona przez jakiœ obiekt to zerujemy poprzedni imput aby kamera nie wariowa³a
+				{
+					cameraInputWasDisable = false;
+					deltaTimeMultiplier = 1.0f;
+					_input.look.x = _input.look.y = 0.0f;
+				}
+				else
+				{
+					_cinemachineTargetPitch += _input.look.y * RotationSpeed * deltaTimeMultiplier;
+					_rotationVelocity = _input.look.x * RotationSpeed * deltaTimeMultiplier;
 
-				// clamp our pitch rotation
-				_cinemachineTargetPitch = ClampAngle(_cinemachineTargetPitch, BottomClamp, TopClamp);
+					// clamp our pitch rotation
+					_cinemachineTargetPitch = ClampAngle(_cinemachineTargetPitch, BottomClamp, TopClamp);
 
-				// Update Cinemachine camera target pitch
-				CinemachineCameraTarget.transform.localRotation = Quaternion.Euler(_cinemachineTargetPitch, 0.0f, 0.0f);
+					// Update Cinemachine camera target pitch
+					CinemachineCameraTarget.transform.localRotation = Quaternion.Euler(_cinemachineTargetPitch, 0.0f, 0.0f);
 
-				// rotate the player left and right
-				transform.Rotate(Vector3.up * _rotationVelocity);
+					// rotate the player left and right
+					transform.Rotate(Vector3.up * _rotationVelocity);
+				}
 			}
 		}
 

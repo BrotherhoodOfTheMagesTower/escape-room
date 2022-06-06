@@ -5,12 +5,12 @@ using UnityEngine.UI;
 
 public class InventoryManager : MonoBehaviour
 {
-    public List<Item> Items;
+    public static List<Item> Items = new List<Item>();
     public Transform ItemContent;
     public GameObject InventoryItem;
     private void Awake()
     {
-        Items = new List<Item>();
+
     }
 
     public void Add(Item item)
@@ -41,9 +41,11 @@ public class InventoryManager : MonoBehaviour
             GameObject obj = Instantiate(InventoryItem, ItemContent);
             var itemName = obj.transform.Find("ItemName").GetComponent<Text>();
             var itemIcon = obj.transform.Find("ItemIcon").GetComponent<Image>();
+            var itemController = obj.transform.Find("ItemController").GetComponent<ItemController>();
 
             itemName.text = item.itemName;
             itemIcon.sprite = item.icon;
+            itemController.setItem(item);
         }
     }
 

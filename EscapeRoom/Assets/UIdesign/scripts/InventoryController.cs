@@ -2,10 +2,14 @@ using StarterAssets;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InventoryController : MonoBehaviour
 {
     [SerializeField] GameObject panel;
+    [SerializeField] GameObject inspectionPanel;
+    [SerializeField] Text itemDescription;
+    [SerializeField] Image itemSprite;
     [SerializeField] bool showInventory = false;
     [SerializeField] InventoryManager inventoryManager;
     FirstPersonController FPC;
@@ -37,8 +41,10 @@ public class InventoryController : MonoBehaviour
 
     private void openInventory()
     {
-        showInventory = true;
-        panel.SetActive(showInventory);
+        StartCoroutine(DipslayInventoryPanel());
+
+        // Disable mouse look
+        FPC.stopStartCameraRotationUpdate = false;
         mouseLook.cursorLocked = !mouseLook.cursorLocked;
         if (!mouseLook.cursorLocked)
         {
@@ -49,17 +55,80 @@ public class InventoryController : MonoBehaviour
         }
     }
 
+    public void openInspectionPanel(int ItemId)
+    {
+        if (showInventory)
+        {
+            List<int> itemIds = new List<int>();
+            foreach (var item in InventoryManager.Items)
+            {
+                itemIds.Add(item.id);
+            }
+
+            if (itemIds.Contains(ItemId))
+            {
+                panel.SetActive(false);
+                inspectionPanel.SetActive(true);
+
+                var currentItem = InventoryManager.Items.Find(i => i.id == ItemId);
+
+                itemDescription.text = currentItem.content;
+                itemSprite.sprite = currentItem.icon;
+            }
+            else
+            {
+                Debug.Log($"Error in openInspectionPanel() method. Item with {ItemId} not found!");
+            }
+        }
+    }
+
     private void closeInventory()
     {
-        showInventory = false;
-        panel.SetActive(showInventory);
+        StartCoroutine(CloseInventoryPanel());
         mouseLook.cursorLocked = true;
         mouseLook.cursorInputForLook = true;
+        //FPC.stopStartCameraRotationUpdate = true;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
     public void handleCloseButton()
     {
         closeInventory();
+    }
+
+    public void handleReturnButton()
+    {
+        inspectionPanel.SetActive(false);
+        panel.SetActive(true);
+    }
+
+    IEnumerator DipslayInventoryPanel()
+    {
+        showInventory = true;
+        panel.SetActive(showInventory);
+        for (float alpha = 0.0f; alpha <= 0.67f; alpha += 0.05f)
+        {
+            var image = panel.GetComponent<Image>();
+            var color = image.color;
+            color.a = alpha;
+            image.color = color;
+            yield return new WaitForSeconds(0.01f);
+        }
+    }
+
+    IEnumerator CloseInventoryPanel()
+    {
+        for (float alpha = 0.67f; alpha >= 0.1f; alpha -= 0.05f)
+        {
+            var image = panel.GetComponent<Image>();
+            var color = image.color;
+            color.a = alpha;
+            image.color = color;
+            yield return new WaitForSeconds(0.01f);
+        }
+        showInventory = false;
+        panel.SetActive(showInventory);
+        inspectionPanel.SetActive(showInventory);
+        FPC.stopStartCameraRotationUpdate = true;
     }
 }
