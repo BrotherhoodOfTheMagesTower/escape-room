@@ -91,6 +91,7 @@ public class HandleCorrectCode : MonoBehaviour
         showPanel = true;
         panel.SetActive(showPanel);
         mouseLook.cursorLocked = !mouseLook.cursorLocked;
+        FPC.stopStartCameraRotationUpdate = false;
         if (!mouseLook.cursorLocked)
         {
             mouseLook.cursorLocked = true;
@@ -102,6 +103,7 @@ public class HandleCorrectCode : MonoBehaviour
     
     private void closePanel()
     {
+        FPC.stopStartCameraRotationUpdate = true;
         showPanel = false;
         panel.SetActive(showPanel);
         mouseLook.cursorLocked = true;
