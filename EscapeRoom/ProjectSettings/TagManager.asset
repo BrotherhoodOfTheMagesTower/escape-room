@@ -22,6 +22,11 @@ TagManager:
   - JerryCan
   - ChestLid
   - Key
+  - Exit_RoomX
+  - Key_RoomX
+  - CapsuleCodeArea
+  - northWall
+  - john
   layers:
   - Default
   - TransparentFX
