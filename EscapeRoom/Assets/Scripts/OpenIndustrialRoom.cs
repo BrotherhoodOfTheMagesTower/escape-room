@@ -5,8 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class OpenIndustrialRoom : MonoBehaviour
 {
+    [SerializeField] sceneController sc;
+    [SerializeField] string sceneName;
     void OnTriggerEnter(Collider other)
     {
-        SceneManager.LoadScene(2);
+        sc.changeSceneTo(sceneName);
+        //SceneManager.LoadScene(2);
     }
 }
