@@ -30,6 +30,8 @@ TagManager:
   - carCamera
   - movingCar
   - movingCarCamera
+  - Selectable
+  - Pillow
   layers:
   - Default
   - TransparentFX
