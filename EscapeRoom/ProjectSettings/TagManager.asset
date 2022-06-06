@@ -27,6 +27,9 @@ TagManager:
   - CapsuleCodeArea
   - northWall
   - john
+  - carCamera
+  - movingCar
+  - movingCarCamera
   layers:
   - Default
   - TransparentFX
