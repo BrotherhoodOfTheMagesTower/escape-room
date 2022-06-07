@@ -36,6 +36,8 @@ TagManager:
   - Chest
   - pBoxCollider
   - Pillow
+  - Key_Garage
+  - CarCollider
   layers:
   - Default
   - TransparentFX
