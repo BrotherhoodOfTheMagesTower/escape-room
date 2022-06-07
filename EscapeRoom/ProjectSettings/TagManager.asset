@@ -31,11 +31,11 @@ TagManager:
   - movingCar
   - movingCarCamera
   - Selectable
-<<<<<<< HEAD
+  - GateToDestroy
+  - NotePad
+  - Chest
   - pBoxCollider
-=======
   - Pillow
->>>>>>> room2
   layers:
   - Default
   - TransparentFX
