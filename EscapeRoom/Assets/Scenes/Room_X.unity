@@ -4233,7 +4233,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 9, y: 191}
+  m_AnchoredPosition: {x: 9, y: 240}
   m_SizeDelta: {x: 581.7, y: 191.335}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &378587413
@@ -4258,28 +4258,25 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'In a field of color...
 
-    
 
-    pink - You throw thing into it but
-    you don''t take them out
+    pink - You throw thing into it but you don''t
+    take them out
 
-    
 
     blue - Something for children and workers
 
-    
 
-    orange
-    - Cats love it
+    orange -
+    Cats love it
 
-    
+
 
     white - The most expensive thing now
 
-    
 
-    green
-    - Something musical and active'
+
+    green - Something
+    musical and active'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 86a8e2906fc6222498b96fda56f7445e, type: 2}
   m_sharedMaterial: {fileID: -1934306425702193460, guid: 86a8e2906fc6222498b96fda56f7445e, type: 2}
@@ -9348,7 +9345,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 719084673}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 5}
+  m_LocalPosition: {x: 0, y: 0, z: 7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 81516103}
@@ -10054,24 +10051,20 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'In line 1, there are two correct numbers, but in the wrong order.
 
-    
 
     In
     line 2, one number is correctly positioned.
 
-    
 
-    In line 3, one number
-    is also correctly positioned.
+    In line 3, one number is also
+    correctly positioned.
 
-    
 
     In line 4, all numbers are wrong.
 
-    
 
-    In
-    line 5, one number is correctly positioned.'
+    In line 5,
+    one number is correctly positioned.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 86a8e2906fc6222498b96fda56f7445e, type: 2}
   m_sharedMaterial: {fileID: -1934306425702193460, guid: 86a8e2906fc6222498b96fda56f7445e, type: 2}
@@ -23689,7 +23682,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1889249325}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 5}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1547213725}
