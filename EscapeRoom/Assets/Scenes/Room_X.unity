@@ -4259,23 +4259,21 @@ MonoBehaviour:
   m_text: 'In a field of color...
 
 
-    pink - You throw thing into it but you don''t
-    take them out
+    orange - You throw thing into it but you
+    don''t take them out
 
 
-    blue - Something for children and workers
+    green - Something for children and workers
 
 
-    orange -
-    Cats love it
+    blue
+    - Cats love it
 
 
-
-    white - The most expensive thing now
-
+    pink - The most expensive thing now
 
 
-    green - Something
+    white - Something
     musical and active'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 86a8e2906fc6222498b96fda56f7445e, type: 2}
