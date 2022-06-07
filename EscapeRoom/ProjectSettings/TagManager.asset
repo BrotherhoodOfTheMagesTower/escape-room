@@ -30,6 +30,10 @@ TagManager:
   - carCamera
   - movingCar
   - movingCarCamera
+  - Selectable
+  - GateToDestroy
+  - NotePad
+  - Chest
   layers:
   - Default
   - TransparentFX

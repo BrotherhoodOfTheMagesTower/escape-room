@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ShowTip : MonoBehaviour
+public class ShowInstructions : MonoBehaviour
 {
 
 
@@ -58,7 +58,6 @@ public class ShowTip : MonoBehaviour
     }
     private void openPanel()
     {
-
         showPanel = true;
         panel.SetActive(showPanel);
         mouseLook.cursorLocked = !mouseLook.cursorLocked;
