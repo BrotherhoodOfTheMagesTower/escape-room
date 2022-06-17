@@ -123,6 +123,63 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &427104
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1315286538}
+    m_Modifications:
+    - target: {fileID: 100000, guid: b1d24824286892f4a9b455fd5d4699d1, type: 3}
+      propertyPath: m_Name
+      value: hammer
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: b1d24824286892f4a9b455fd5d4699d1, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: b1d24824286892f4a9b455fd5d4699d1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 56.039284
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: b1d24824286892f4a9b455fd5d4699d1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 37.652996
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: b1d24824286892f4a9b455fd5d4699d1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -18.995686
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: b1d24824286892f4a9b455fd5d4699d1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: b1d24824286892f4a9b455fd5d4699d1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: b1d24824286892f4a9b455fd5d4699d1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: b1d24824286892f4a9b455fd5d4699d1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: b1d24824286892f4a9b455fd5d4699d1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: b1d24824286892f4a9b455fd5d4699d1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: b1d24824286892f4a9b455fd5d4699d1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b1d24824286892f4a9b455fd5d4699d1, type: 3}
 --- !u!4 &2428705 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8856721788569553245, guid: ab7b1a134b2ac0143b93a624faee9d1c, type: 3}
@@ -523,7 +580,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e78835e062aff946b8c733e33615583, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panel: {fileID: 175943228}
+  panel: {fileID: 1723382743}
   showPanel: 0
 --- !u!1001 &85462361
 PrefabInstance:
@@ -1335,7 +1392,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &175943229
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1509,7 +1566,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &202525209
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4625,7 +4682,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &637054976
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5728,6 +5785,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 893056691371057260, guid: 7c7590a172bae8b478268e25ed6de3c4, type: 3}
   m_PrefabInstance: {fileID: 736081892}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &750915184 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: b1d24824286892f4a9b455fd5d4699d1, type: 3}
+  m_PrefabInstance: {fileID: 427104}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &758472983 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8856721788569553245, guid: ab7b1a134b2ac0143b93a624faee9d1c, type: 3}
@@ -6113,7 +6175,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 70}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &801768993
 MonoBehaviour:
@@ -9896,7 +9958,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1255241535
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10316,6 +10378,37 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a7d93f40779f4356abfbbef3a2ae57c, type: 3}
+--- !u!1 &1315286537
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1315286538}
+  m_Layer: 0
+  m_Name: ClueItems
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1315286538
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1315286537}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 72.90522, y: -36.452995, z: 13.295686}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 750915184}
+  m_Father: {fileID: 0}
+  m_RootOrder: 20
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1329462777 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d7d3fa1e450020e42b694021662529cc, type: 3}
@@ -12241,7 +12334,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1600282704
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12951,12 +13044,12 @@ GameObject:
   - component: {fileID: 1723382746}
   - component: {fileID: 1723382745}
   m_Layer: 5
-  m_Name: ShowTip
+  m_Name: ShowTipMechanic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1723382744
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14757,7 +14850,7 @@ GameObject:
   - component: {fileID: 1898451023}
   - component: {fileID: 1898451022}
   m_Layer: 5
-  m_Name: TipDescription
+  m_Name: TipDescriptionMechanic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14802,22 +14895,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'In line 1, there are two correct numbers, but in the wrong order.
-
-
-    In
-    line 2, one number is correctly positioned.
-
-
-    In line 3, one number is also
-    correctly positioned.
-
-
-    In line 4, all numbers are wrong.
-
-
-    In line 5,
-    one number is correctly positioned.'
+  m_text: Hi stranger! I have lost my favorite hammer without which I can't fix cars.
+    Can you help me find it?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 86a8e2906fc6222498b96fda56f7445e, type: 2}
   m_sharedMaterial: {fileID: -1934306425702193460, guid: 86a8e2906fc6222498b96fda56f7445e, type: 2}
