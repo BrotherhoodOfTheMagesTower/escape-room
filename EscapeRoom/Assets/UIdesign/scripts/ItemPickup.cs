@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ItemPickup : MonoBehaviour
@@ -14,7 +12,7 @@ public class ItemPickup : MonoBehaviour
         //toastController = toastPanel.GetComponent<ToastController>();
         inventory.Add(newItem);
         Destroy(gameObject);
-        toastController.setToastContent($"I found some { newItem.itemName}");
+        toastController.setToastContent($"I found {newItem.itemName}");
         toastController.makeToast();
     }
     // Start is called before the first frame update
@@ -25,7 +23,7 @@ public class ItemPickup : MonoBehaviour
 
     private void OnMouseEnter()
     {
-        if(Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E))
         {
             Pickup();
         }
@@ -44,6 +42,6 @@ public class ItemPickup : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

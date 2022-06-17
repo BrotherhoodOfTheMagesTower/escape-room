@@ -38,6 +38,7 @@ TagManager:
   - Pillow
   - Key_Garage
   - CarCollider
+  - mechanic
   layers:
   - Default
   - TransparentFX
