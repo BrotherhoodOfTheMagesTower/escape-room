@@ -2,24 +2,21 @@ using StarterAssets;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class AskToRepairCar : MonoBehaviour
+public class GarageShowTip : MonoBehaviour
 {
     [SerializeField] GameObject panel;
     [SerializeField] bool showPanel = false;
     [SerializeField] int desiredCollectedItemId;
-    //[SerializeField] Item desiredCollectedItem;
     FirstPersonController FPC;
     private bool inside = false;
     private Text description;
     private StarterAssetsInputs mouseLook;
-
 
     void OnMouseDrag()
     {
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         transform.position = mousePos;
     }
-
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +25,7 @@ public class AskToRepairCar : MonoBehaviour
         panel.SetActive(showPanel);
         inside = false;
         mouseLook = GameObject.Find("PlayerCapsule").GetComponent<StarterAssetsInputs>();
+
     }
 
     // Update is called once per frame
@@ -38,9 +36,8 @@ public class AskToRepairCar : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
-        if (col.gameObject.tag == "Player" && InventoryManager.Items.Find(i => i.id == desiredCollectedItemId))
+        if (col.gameObject.tag == "Player" && !InventoryManager.Items.Find(i => i.id == desiredCollectedItemId))
         {
-            //showTipMechanic.SetActive(false);
             OpenPanel();
         }
     }
@@ -54,6 +51,7 @@ public class AskToRepairCar : MonoBehaviour
     }
     private void OpenPanel()
     {
+
         showPanel = true;
         panel.SetActive(showPanel);
         mouseLook.cursorLocked = !mouseLook.cursorLocked;
@@ -78,4 +76,3 @@ public class AskToRepairCar : MonoBehaviour
         Cursor.visible = false;
     }
 }
-
