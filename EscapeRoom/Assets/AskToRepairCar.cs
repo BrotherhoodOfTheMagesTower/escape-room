@@ -7,7 +7,6 @@ public class AskToRepairCar : MonoBehaviour
     [SerializeField] GameObject panel;
     [SerializeField] bool showPanel = false;
     [SerializeField] int desiredCollectedItemId;
-    //[SerializeField] Item desiredCollectedItem;
     FirstPersonController FPC;
     private bool inside = false;
     private Text description;
