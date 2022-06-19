@@ -4,6 +4,7 @@ using UnityStandardAssets.Vehicles.Car;
 
 public class GettingInOutOfCars : MonoBehaviour
 {
+    public static bool InCar { get; set; } = false;
     [Header("Camera")]
     [SerializeField] AutoCam myCamera = null;
 
@@ -16,14 +17,16 @@ public class GettingInOutOfCars : MonoBehaviour
     [SerializeField] CarController carEngine = null;
     [SerializeField] float distanceToCar = 3f;
 
+    [Space, Header("Items")]
+    [SerializeField] int fuelId;
+
     [Header("Input")]
     [SerializeField] KeyCode enterExitKey = KeyCode.E;
-    private bool inCar = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        inCar = !car.activeSelf;
+        InCar = !car.activeSelf;
         carController.enabled = false;
     }
 
@@ -32,16 +35,19 @@ public class GettingInOutOfCars : MonoBehaviour
     {
         if (Input.GetKeyDown(enterExitKey))
         {
-            if (inCar)
-                GetOutOfCar();
-            else if (Vector3.Distance(car.transform.position, playerCharacter.transform.position) < distanceToCar)
-                GetIntoCar();
+            if (FixCar.CanEnterCar)
+            {
+                if (InCar)
+                    GetOutOfCar();
+                else if (Vector3.Distance(car.transform.position, playerCharacter.transform.position) < distanceToCar)
+                    GetIntoCar();
+            }
         }
     }
 
     void GetOutOfCar()
     {
-        inCar = false;
+        InCar = false;
         playerCharacter.SetActive(true);
         playerCharacter.transform.position = car.transform.position + car.transform.TransformDirection(2.0f * Vector3.left);
         myCamera.SetTarget(playerCharacter.transform);
@@ -50,7 +56,7 @@ public class GettingInOutOfCars : MonoBehaviour
     }
     void GetIntoCar()
     {
-        inCar = true;
+        InCar = true;
         playerCharacter.SetActive(false);
         myCamera.SetTarget(car.transform);
         carController.enabled = true;

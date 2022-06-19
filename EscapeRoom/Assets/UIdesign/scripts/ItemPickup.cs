@@ -5,7 +5,6 @@ public class ItemPickup : MonoBehaviour
     [SerializeField] InventoryManager inventory;
     [SerializeField] Item newItem;
     [SerializeField] ToastController toastController;
-    //private ToastController toastController;
 
     private void Pickup()
     {
