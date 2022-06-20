@@ -19,7 +19,7 @@ public class LadderScript : MonoBehaviour
 	{
 		if (col.gameObject.tag == "Ladder")
 		{
-			inside = !inside;
+			inside = true;
 		}
 	}
 
@@ -27,7 +27,7 @@ public class LadderScript : MonoBehaviour
 	{
 		if (col.gameObject.tag == "Ladder")
 		{
-			inside = !inside;
+			inside = false;
 		}
 	}
 
