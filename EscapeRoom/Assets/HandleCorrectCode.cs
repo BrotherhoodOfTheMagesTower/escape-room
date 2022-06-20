@@ -37,6 +37,7 @@ public class HandleCorrectCode : MonoBehaviour
         inside = false;
         key.transform.position = new Vector3(34.54666f, 20.787f, -15.28f); //ensure that key is outside scene when the player enters the scene
         exitArea.transform.position = new Vector3(30.29f, 24.11f, -31.809f); //ensure that exit area is outside scene when the player enters the scene
+        GameObject.Find("Exit_Light").GetComponent<Light>().enabled = false; //ensure that the exit light is turned off
         mouseLook = GameObject.Find("PlayerCapsule").GetComponent<StarterAssets.StarterAssetsInputs>();
 
     }
@@ -51,6 +52,7 @@ public class HandleCorrectCode : MonoBehaviour
                 resultLabel.GetComponent<Text>().color = Color.green;
                 resultLabel.GetComponent<Text>().text = "Correct code!";
                 hintLabel.GetComponent<Text>().text = " Now find the key and the EXIT!";
+                GameObject.Find("Exit_Light").GetComponent<Light>().enabled = true;
                 key.transform.position = new Vector3(34.54666f, 1.067f, -15.28f); //set key's position behind the ladder
                 exitArea.transform.position = new Vector3(30.29f, 13.65f, -31.809f); //set exit area position (visible for player)
             }

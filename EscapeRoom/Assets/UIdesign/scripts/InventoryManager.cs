@@ -61,4 +61,15 @@ public class InventoryManager : MonoBehaviour
             this.ListItems();
         }
     }
+
+    public bool IsGivenItemInEq(string itemName)
+    {
+        foreach (var item in Items)
+        {
+            var itName = item.itemName;
+            if (itName.Equals(itemName))
+                return true;
+        }
+        return false;
+    }
 }
