@@ -51,7 +51,7 @@ public class FixCar : MonoBehaviour
                 codeHasBeenEntered = true;
                 if (InventoryManager.Items.Find(i => i.id == fuelId))
                 {
-                    hintLabel.GetComponent<Text>().text = "The car is now repaired To enter car press \"E\"";
+                    hintLabel.GetComponent<Text>().text = "The car is now repaired. To enter car press \"E\"";
                     CanEnterCar = true;
                 }
                 else
@@ -75,29 +75,34 @@ public class FixCar : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
-        if (GettingInOutOfCars.InCar) return;
 
-        if (codeHasBeenEntered && InventoryManager.Items.Find(i => i.id == fuelId))
+        if (col.gameObject.tag == "Player")
         {
-            toastController.setToastContent($"To enter car press \"E\"");
-            toastController.makeToast();
-            CanEnterCar = true;
-        }
-        else if (codeHasBeenEntered && !InventoryManager.Items.Find(i => i.id == fuelId))
-        {
-            toastController.setToastContent($"Fuel level is too low to start the car.");
-            toastController.makeToast();
-            CanEnterCar = false;
-        }
-        else
-        {
-            if (col.gameObject.tag == "Player" && InventoryManager.Items.Find(i => i.id == hammerId))
+            if (GettingInOutOfCars.InCar) return;
+            if (codeHasBeenEntered && InventoryManager.Items.Find(i => i.id == fuelId))
+            {
+                toastController.setToastContent("To enter car press \"E\"");
+                toastController.makeToast();
+                CanEnterCar = true;
+            }
+            else if (codeHasBeenEntered && !InventoryManager.Items.Find(i => i.id == fuelId))
+            {
+                toastController.setToastContent("Fuel level is too low.");
+                toastController.makeToast();
+                CanEnterCar = false;
+            }
+            else if (InventoryManager.Items.Find(i => i.id == hammerId))
             {
                 OpenPanel();
                 inside = !inside;
                 inputLabel.GetComponent<Text>().enabled = true;
                 inputLabel.GetComponent<Text>().text = "";
                 hintPlaceHolder.GetComponent<Text>().enabled = true;
+            }
+            else
+            {
+                toastController.setToastContent("Can't enter now.");
+                toastController.makeToast();
             }
         }
     }
