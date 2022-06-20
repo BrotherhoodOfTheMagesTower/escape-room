@@ -16,6 +16,7 @@ public class FifthLightScript : MonoBehaviour
 		if (col.gameObject.tag == "FifthLight")
 		{
 			col.gameObject.GetComponent<Renderer>().material.color = new Color(1, 1, 1);
+			GameObject.Find("SpotLight_5").GetComponent<Light>().enabled = true;
 			inside = !inside;
 		}
 	}
