@@ -39,6 +39,7 @@ TagManager:
   - Key_Garage
   - CarCollider
   - mechanic
+  - HiddenRoomDoor
   layers:
   - Default
   - TransparentFX
