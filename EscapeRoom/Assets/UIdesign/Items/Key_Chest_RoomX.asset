@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Key_Chest_RoomX
   m_EditorClassIdentifier: 
   id: 0
-  itemName: 
-  content: 
+  itemName: Key_Chest
+  content: This key opens chest in Room_X
   value: 0
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 513b4344b9bc2ba48acfb107f029aed0, type: 3}

@@ -13633,7 +13633,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0e160f3f149ec541b3a4b367e7141c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: 0a0ec2265c8a77a4c9350a362aefd395, type: 2}
+  item: {fileID: 11400000, guid: 490d740ca38f8b844b332a4ad879bac6, type: 2}
 --- !u!114 &1014868063
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13647,7 +13647,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventory: {fileID: 857484150}
-  newItem: {fileID: 11400000, guid: 0a0ec2265c8a77a4c9350a362aefd395, type: 2}
+  newItem: {fileID: 11400000, guid: 490d740ca38f8b844b332a4ad879bac6, type: 2}
   toastController: {fileID: 599377677}
 --- !u!65 &1014868064
 BoxCollider:
