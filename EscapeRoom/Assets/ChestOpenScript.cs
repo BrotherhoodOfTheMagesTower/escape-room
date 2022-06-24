@@ -40,12 +40,12 @@ public class ChestOpenScript : MonoBehaviour
 
     private void DisplayInfo()
     {
-        toastController.setKeyIsMissingToastContent("You don't have key!");
+        toastController.setKeyIsMissingToastContent("I don't have a key to open the chest!");
         toastController.makeKeyIsMissingToast();
     }
     private void DisplayInfo2()
     {
-        toastController.setKeyIsMissingToastContent("Chest opened!");
+        toastController.setKeyIsMissingToastContent("I have opened a chest!");
         toastController.makeKeyIsMissingToast();
     }
 }

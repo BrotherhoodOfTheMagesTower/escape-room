@@ -42,6 +42,7 @@ TagManager:
   - HiddenRoomDoor
   - Pipe_1
   - Pipe_2
+  - character
   layers:
   - Default
   - TransparentFX

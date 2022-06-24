@@ -40,12 +40,12 @@ public class HiddenDoorOpenScript : MonoBehaviour
 
     private void DisplayInfo()
     {
-        toastController.setKeyIsMissingToastContent("You don't have key to enter the hidden room!");
+        toastController.setKeyIsMissingToastContent("I don't have key to enter the room!");
         toastController.makeKeyIsMissingToast();
     }
     private void DisplayInfo2()
     {
-        toastController.setKeyIsMissingToastContent("Door to hidden room opened!");
+        toastController.setKeyIsMissingToastContent("I have opened the door!");
         toastController.makeKeyIsMissingToast();
     }
 }

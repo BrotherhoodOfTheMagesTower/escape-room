@@ -46,7 +46,7 @@ public class HandleCorrectCodeFromBooks : MonoBehaviour
             {
                 resultLabel.GetComponent<Text>().color = Color.green;
                 resultLabel.GetComponent<Text>().text = "Correct code!";
-                hintLabel.GetComponent<Text>().text = "Gate has been opened! Instructions are in the chest, key is on another level";
+                hintLabel.GetComponent<Text>().text = "Gate has been opened!";
                 Destroy(gate);
 
             }

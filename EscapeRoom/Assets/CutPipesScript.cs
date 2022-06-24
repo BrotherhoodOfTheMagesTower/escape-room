@@ -13,11 +13,15 @@ public class CutPipesScript : MonoBehaviour
     private bool itemWasFound = false;
     GameObject pipe1;
     GameObject pipe2;
+    GameObject character;
+    BoxCollider collider;
 
     void Start()
     {
         pipe1 = GameObject.FindWithTag("Pipe_1");
         pipe2 = GameObject.FindWithTag("Pipe_2");
+        character = GameObject.FindWithTag("character");
+        collider = character.GetComponent<BoxCollider>();
     }
 
     void OnTriggerEnter(Collider col)
@@ -27,23 +31,25 @@ public class CutPipesScript : MonoBehaviour
             if (inventoryManager.IsGivenItemInEq("Saw_RoomX"))
             {
                 DisplayInfo2();
-                GetComponent<Collider>().isTrigger = true;
                 Destroy(pipe1);
                 Destroy(pipe2);
             }
             else
+            {
                 DisplayInfo();
+                collider.isTrigger = true;
+            }
         }
     }
 
     private void DisplayInfo()
     {
-        toastController.setKeyIsMissingToastContent("You'll need to find a saw to cut the pipes. Recently they have been used to repair pipes above the library");
+        toastController.setKeyIsMissingToastContent("I need to cut the pipes. Maybe i should ask somebody for help... ");
         toastController.makeKeyIsMissingToast();
     }
     private void DisplayInfo2()
     {
-        toastController.setKeyIsMissingToastContent("You have successfully cut the pipes!");
+        toastController.setKeyIsMissingToastContent("I have successfully cut the pipes!");
         toastController.makeKeyIsMissingToast();
     }
 }
