@@ -40,6 +40,8 @@ TagManager:
   - CarCollider
   - mechanic
   - HiddenRoomDoor
+  - Pipe_1
+  - Pipe_2
   layers:
   - Default
   - TransparentFX

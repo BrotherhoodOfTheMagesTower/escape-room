@@ -20,6 +20,7 @@ public class ChestOpenScript : MonoBehaviour
         notebook = GameObject.FindWithTag("NotePad");
         collider = notebook.GetComponent<BoxCollider>();
         lid = GameObject.FindWithTag("ChestLid");
+
     }
 
     void OnTriggerEnter(Collider col)
