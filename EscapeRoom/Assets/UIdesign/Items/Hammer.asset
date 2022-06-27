@@ -16,4 +16,4 @@ MonoBehaviour:
   itemName: Hammer
   content: 
   value: 0
-  icon: {fileID: 21300000, guid: f22c507e154c2504a92dbe813189bd15, type: 3}
+  icon: {fileID: 21300000, guid: a7ad39f6dd3347c4ebf43c78c3b227ca, type: 3}

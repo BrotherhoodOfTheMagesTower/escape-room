@@ -845,6 +845,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5571534842678598193, guid: 9295189b4f03b8a47b9873a8492069d1, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -5051912661706895321, guid: ad10e4113786ee546b5e5563829d2b45, type: 3}
     - target: {fileID: 6586380701880126115, guid: 9295189b4f03b8a47b9873a8492069d1, type: 3}
       propertyPath: m_Name
       value: Key_Garage
@@ -857,6 +861,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Key_Garage
       objectReference: {fileID: 0}
+    - target: {fileID: 7689586449187942139, guid: 9295189b4f03b8a47b9873a8492069d1, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0897acad11ce8c641b71cbec176a86ff, type: 2}
     - target: {fileID: 7863301623646972091, guid: 9295189b4f03b8a47b9873a8492069d1, type: 3}
       propertyPath: m_RootOrder
       value: 20
@@ -5647,8 +5655,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.33107692, y: 0.5552772, z: 0.38906258}
-  m_Center: {x: -0.025332745, y: -0.24945074, z: 0.05273731}
+  m_Size: {x: 0.33107695, y: 0.5907634, z: 0.6339018}
+  m_Center: {x: -0.025333187, y: -0.2671898, z: -0.06968208}
 --- !u!1 &637054975
 GameObject:
   m_ObjectHideFlags: 0
@@ -13541,6 +13549,8 @@ MonoBehaviour:
   sc: {fileID: 350525906}
   sceneName: Playground
   keyId: 12
+  hammerId: 10
+  fuelId: 11
   toastController: {fileID: 1849756735}
 --- !u!4 &1527637478 stripped
 Transform:

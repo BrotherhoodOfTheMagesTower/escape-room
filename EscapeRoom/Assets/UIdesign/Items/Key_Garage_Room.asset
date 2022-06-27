@@ -16,4 +16,4 @@ MonoBehaviour:
   itemName: Key garage
   content: 
   value: 0
-  icon: {fileID: 21300000, guid: f22c507e154c2504a92dbe813189bd15, type: 3}
+  icon: {fileID: 21300000, guid: 7eced922ec1d09345b6d3825b3296f30, type: 3}

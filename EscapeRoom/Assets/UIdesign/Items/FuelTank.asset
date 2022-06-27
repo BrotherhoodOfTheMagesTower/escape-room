@@ -16,4 +16,4 @@ MonoBehaviour:
   itemName: Fuel tank
   content: 
   value: 0
-  icon: {fileID: 21300000, guid: f22c507e154c2504a92dbe813189bd15, type: 3}
+  icon: {fileID: 21300000, guid: 505efbd2a0ce1e0468b202184863d7e6, type: 3}
