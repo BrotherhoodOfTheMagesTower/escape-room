@@ -22,7 +22,7 @@ public class ParkCar : MonoBehaviour
     {
         if (col.gameObject.tag == "CarCollider")
         {
-            //key.SetActive(false);
+            key.SetActive(false);
         }
     }
 }
