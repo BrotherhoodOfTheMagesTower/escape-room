@@ -1,12 +1,12 @@
 using UnityEngine;
-using UnityStandardAssets.Cameras;
 using UnityStandardAssets.Vehicles.Car;
 
 public class GettingInOutOfCars : MonoBehaviour
 {
     public static bool InCar { get; set; } = false;
     [Header("Camera")]
-    [SerializeField] AutoCam myCamera = null;
+    [SerializeField] Camera myCamera = null;
+    [SerializeField] GameObject autoCam = null;
 
     [Space, Header("Player Stuff")]
     [SerializeField] GameObject playerCharacter = null;
@@ -50,7 +50,8 @@ public class GettingInOutOfCars : MonoBehaviour
         InCar = false;
         playerCharacter.SetActive(true);
         playerCharacter.transform.position = car.transform.position + car.transform.TransformDirection(2.0f * Vector3.left);
-        myCamera.SetTarget(playerCharacter.transform);
+        //myCamera.SetTarget(playerCharacter.transform);
+        autoCam.SetActive(false);
         carController.enabled = false;
         carEngine.Move(0, 0, 1, 1);
     }
@@ -58,7 +59,8 @@ public class GettingInOutOfCars : MonoBehaviour
     {
         InCar = true;
         playerCharacter.SetActive(false);
-        myCamera.SetTarget(car.transform);
+        autoCam.SetActive(true);
+        //myCamera.SetTarget(car.transform);
         carController.enabled = true;
     }
 }
