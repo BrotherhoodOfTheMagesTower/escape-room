@@ -5,7 +5,20 @@ using UnityEngine;
 public class MapScript : MonoBehaviour
 {
     public Transform player;
+    public Material green;
+    [SerializeField] public GameObject roomXIcon;
+    [SerializeField] public GameObject garageIcon;
+    [SerializeField] public GameObject woodenHouseIcon;
 
+    void Update()
+    {
+        if (InventoryManager.Items.Find(i => i.id == 3))
+            roomXIcon.GetComponent<MeshRenderer>().material = green; ;
+        if (InventoryManager.Items.Find(i => i.id == 12))
+            garageIcon.GetComponent<MeshRenderer>().material = green;
+        if (InventoryManager.Items.Find(i => i.id == 12))
+            woodenHouseIcon.GetComponent<MeshRenderer>().material = green;
+    }
     void LateUpdate()
     {
         Vector3 newPosition = player.position;
