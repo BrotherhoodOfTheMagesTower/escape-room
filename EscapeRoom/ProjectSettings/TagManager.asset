@@ -43,6 +43,7 @@ TagManager:
   - Pipe_1
   - Pipe_2
   - character
+  - MetalicDoor
   layers:
   - Default
   - TransparentFX
