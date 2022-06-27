@@ -38,8 +38,8 @@ public class ClockTip : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (inventoryManager.IsGivenItemInEq("Battery_Room2") && inventoryManager.IsGivenItemInEq("Battery_2_Room 2"))
-            description.text = "siema";
+        if (inventoryManager.IsGivenItemInEq("Battery_1") && inventoryManager.IsGivenItemInEq("Battery_2"))
+            description.text = "\nLook at the pictures and then at the safe.\n\nThis should point you in the direction of guessing the code";
     }
 
     void OnTriggerEnter(Collider col)
@@ -83,3 +83,53 @@ public class ClockTip : MonoBehaviour
         Cursor.visible = false;
     }
 }
+/*using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class HiddenDoorOpenScript : MonoBehaviour
+{
+    [SerializeField] InventoryManager inventoryManager;
+    [SerializeField] ToastController toastController;
+
+    private static List<Item> Items = new List<Item>();
+    private bool itemWasFound = false;
+    GameObject door;
+    BoxCollider collider;
+
+    void Start()
+    {
+        door = GameObject.FindWithTag("HiddenRoomDoor");
+        collider = door.GetComponent<BoxCollider>();
+    }
+
+    void OnTriggerEnter(Collider col)
+    {
+        if (col.gameObject.tag == "Player")
+        {
+            if (inventoryManager.IsGivenItemInEq("Key_HiddenRoom"))
+            {
+                DisplayInfo2();
+                GetComponent<Collider>().isTrigger = true;
+                //Destroy(door);
+                door.transform.position = new Vector3(-25.49f, 0.013f, 1.13f);
+                door.transform.Rotate(0, 131.39f, 0);
+                collider.isTrigger = false;
+            }
+            else
+                DisplayInfo();
+        }
+    }
+
+    private void DisplayInfo()
+    {
+        toastController.setKeyIsMissingToastContent("I don't have key to enter the room!");
+        toastController.makeKeyIsMissingToast();
+    }
+    private void DisplayInfo2()
+    {
+        toastController.setKeyIsMissingToastContent("I have opened the door!");
+        toastController.makeKeyIsMissingToast();
+    }
+}*/
