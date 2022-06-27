@@ -63,5 +63,5 @@ To play the game use:
 In development
 
 ### Links
-
+- download page: https://marekkawalski.itch.io/escape-room
 
