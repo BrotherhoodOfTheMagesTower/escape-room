@@ -16,7 +16,7 @@ public class MapScript : MonoBehaviour
             roomXIcon.GetComponent<MeshRenderer>().material = green; ;
         if (InventoryManager.Items.Find(i => i.id == 12))
             garageIcon.GetComponent<MeshRenderer>().material = green;
-        if (InventoryManager.Items.Find(i => i.id == 12))
+        if (InventoryManager.Items.Find(i => i.id == 73))
             woodenHouseIcon.GetComponent<MeshRenderer>().material = green;
     }
     void LateUpdate()
