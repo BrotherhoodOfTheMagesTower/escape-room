@@ -16,4 +16,4 @@ MonoBehaviour:
   itemName: Battery_1
   content: 
   value: 0
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 15855e9c90a90ee40861196be543e54b, type: 3}

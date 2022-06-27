@@ -31,13 +31,11 @@ public class SafeHandle : MonoBehaviour
         inputLabel = GameObject.Find("InputText").GetComponent<Text>();
         hintPlaceHolder = GameObject.Find("HintPlaceholder").GetComponent<Text>();
         hintLabel = GameObject.Find("HintLabel").GetComponent<Text>();
-        //exitArea = GameObject.Find("Exit_RoomX");
         key = GameObject.Find("Key_Room2");
         panel.SetActive(showPanel);
         inside = false;
         key.transform.position = new Vector3(15.87f, 3.142926f, 30.58f); //ensure that key is outside scene when the player enters the scene
-        //exitArea.transform.position = new Vector3(30.29f, 24.11f, -31.809f); //ensure that exit area is outside scene when the player enters the scene
-        //GameObject.Find("Exit_Light").GetComponent<Light>().enabled = false; //ensure that the exit light is turned off
+        GameObject.Find("ExitLight").GetComponent<Light>().enabled = false; //ensure that the exit light is turned off
         mouseLook = GameObject.Find("PlayerCapsule").GetComponent<StarterAssets.StarterAssetsInputs>();
 
     }
@@ -52,9 +50,9 @@ public class SafeHandle : MonoBehaviour
                 resultLabel.GetComponent<Text>().color = Color.green;
                 resultLabel.GetComponent<Text>().text = "Correct code!";
                 hintLabel.GetComponent<Text>().text = " Get the key and exit room.";
-                //GameObject.Find("Exit_Light").GetComponent<Light>().enabled = true;
+                GameObject.Find("ExitLight").GetComponent<Light>().enabled = true;
                 key.transform.position = new Vector3(15.87f, 3.142926f, 32.535f); //set key's position on safe
-               // exitArea.transform.position = new Vector3(30.29f, 13.65f, -31.809f); //set exit area position (visible for player)
+               
             }
             else
             {
