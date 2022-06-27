@@ -8,9 +8,13 @@ public class InventoryController : MonoBehaviour
 {
     [SerializeField] GameObject panel;
     [SerializeField] GameObject inspectionPanel;
+    [SerializeField] GameObject menuPanel;
+    [SerializeField] GameObject aboutProjectPanel;
     [SerializeField] Text itemDescription;
     [SerializeField] Image itemSprite;
     [SerializeField] bool showInventory = false;
+    [SerializeField] bool showMenuPanel = false;
+    [SerializeField] bool showAboutProjectInfo = false;
     [SerializeField] InventoryManager inventoryManager;
     FirstPersonController FPC;
     StarterAssets.StarterAssetsInputs mouseLook;
@@ -27,7 +31,7 @@ public class InventoryController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.I))
+        if(showMenuPanel == false && Input.GetKeyDown(KeyCode.I))
         {
             inventoryManager.ListItems();
             openInventory();
@@ -36,6 +40,15 @@ public class InventoryController : MonoBehaviour
         if(showInventory == true && Input.GetKeyDown(KeyCode.Escape))
         {
             closeInventory();
+        }
+
+        if (showMenuPanel && Input.GetKeyDown(KeyCode.Escape))
+        {
+            closeMenu();
+        }
+        else if (!showInventory && Input.GetKeyDown(KeyCode.Escape))
+        {
+            openMenu();
         }
     }
 
@@ -53,6 +66,36 @@ public class InventoryController : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
         }
+    }
+
+    private void openMenu()
+    {
+        showMenuPanel = true;
+        menuPanel.SetActive(true);
+
+        // Disable mouse look
+        FPC.stopStartCameraRotationUpdate = false;
+        mouseLook.cursorLocked = !mouseLook.cursorLocked;
+        if (!mouseLook.cursorLocked)
+        {
+            mouseLook.cursorLocked = true;
+            mouseLook.cursorInputForLook = false;
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
+    }
+
+    private void closeMenu()
+    {
+        mouseLook.cursorLocked = true;
+        mouseLook.cursorInputForLook = true;
+        FPC.stopStartCameraRotationUpdate = true;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+
+        showAboutProjectInfo = showMenuPanel = false;
+        menuPanel.SetActive(false);
+        aboutProjectPanel.SetActive(false);
     }
 
     public void openInspectionPanel(int ItemId)
@@ -91,6 +134,7 @@ public class InventoryController : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
+
     public void handleCloseButton()
     {
         closeInventory();
