@@ -26,6 +26,14 @@ public class InventoryManager : MonoBehaviour
         Items.Remove(item);
     }
 
+    public void ClearInventory()
+    {
+        foreach(var item in Items)
+        {
+            Items.Remove(item);
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
